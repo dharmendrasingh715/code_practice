@@ -1,0 +1,23 @@
+{
+  "name": "person",
+  "authors": [
+    "Dharmendra Singh <dharmendrasingh715@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "http://localhost",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mustache.js": "mustache#^2.3.0",
+    "jquery": "^3.3.1",
+    "reset-css": "^3.0.0"
+  }
+}

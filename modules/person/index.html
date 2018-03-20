@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bower_components/reset-css/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <section class="module" id="people-module">
+            <header>
+                <h2>A simple module in object literal pattern</h2>
+            </header>
+            <div class="module-control">
+                <input type="text" placeholder="Person">
+                <button>Add person</button>
+            </div>
+            <div class="module-display">
+                <ul>
+                    <script id="people-template" type="text/template">
+                        {{#people}}
+                        <li>
+                            <span>{{.}}</span>
+                            <i class="del">x</i>
+                        </li>
+                        {{/people}}
+                    </script>
+                </ul>
+            </div>
+            <div class="module-display-count">
+                <script id="stats-template" type="text/template">
+                    <h3>
+                        Total Person: <span class="people-count">{{people}}</span>
+                    </h3>
+                </script>
+                <h3>Total Person: <span class="people-count"></span> </h3>
+            </div>
+        </section>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/mustache.js/mustache.min.js"></script>
+
+    <!-- Simple object literal pattern -->
+    <!-- <script src="scripts/person.js"></script> -->
+    <!-- end object literal module pattern -->
+    
+    
+    <!-- Simple module pattern -->
+    <!-- <script src="scripts/person_module.js"></script> -->
+    <!-- <script src="scripts/person_module_use.js"></script> -->
+    <!-- end simple module pattern -->
+
+
+    <!-- Revealing module pattern and module working together -->
+    <script src="scripts/person_stats.js"></script>
+    <script src="scripts/person_revealing.js"></script>
+    <!-- End revaling -->
+
+
+    <!-- Revealing module with pubsub  -->
+    <!--  -->
+</body>
+</html>
