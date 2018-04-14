@@ -16,7 +16,8 @@ var people = function(){
             people: people
         };
         $ul.html(Mustache.render($template, data));
-        stats.updateCount(people.length);
+        // stats.updateCount(people.length);
+        events.trigger("peopleChanged",people.length);
     }
 
     function addPerson(value) {
@@ -38,11 +39,13 @@ var people = function(){
         render();
     }
 
+    function getPeopleCount() {
+        return people.length;
+    }
+
     return {
         addPerson: addPerson,
         deletePerson:deletePerson,
-        getCountPeople: function() {
-            return people.length;
-        }
+        getCountPeople: getPeopleCount
     };
 }();
